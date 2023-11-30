@@ -21,14 +21,11 @@ const fireflyAlgorithm=({
             globalBestPosition = fireflies[fitnessValues.indexOf(localBestFitness)].position.slice(); // Copy the position
         }
         fireflies = updateFireflies({fireflies, fitnessValues, attractiveness,fitnessFun});
-        
     }
-    console.log("En iyi ateşböceği konumu: ", globalBestPosition);
-    console.log("En iyi uygunluk değeri: ", globalBestFitness);
-    let bestFirefly = findBestFirefly({
-        fireflies:fireflies,
-        fitnessFun:fitnessFun
-    });
+    // console.log("En iyi ateşböceği konumu: ", globalBestPosition);
+    // console.log("En iyi uygunluk değeri: ", globalBestFitness);
+
+    return {globalBestPosition,globalBestFitness}
     // console.log("En iyi ateşböceği: ", bestFirefly);
 }
 
